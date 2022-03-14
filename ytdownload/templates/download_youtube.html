@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="jumbotron bg-light p-3 text-center">
+    <div class="container">
+      <h1 class="display-3">YouTube video/audio downloader</h1>
+      <p>Downloads YouTube in mp4 and mp3 video/audio formats. </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header"><h5>Paste your YouTube link here:</h5></div>
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              {{ form|crispy }}
+              <div class="text-center mt-3">
+                <button class="btn btn-primary btn-md" type="submit" name="audio">Download audio</button>
+                <button class="btn btn-primary btn-md" type="submit" name="video">Download video</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
