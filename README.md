@@ -33,7 +33,7 @@ $ pip install requirements/requirements.txt
 $ python manage.py runserver
 ```
 
-MacOS/Windows:
+MacOS/Linux:
 
 ```bash
 # Clone this repository
