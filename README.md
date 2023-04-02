@@ -46,7 +46,7 @@ $ cd ytdownloader
 $ python3 -m venv .venv_project
 
 # Activate your virtual environment
-$ .venv_project/bin/activate
+$ source .venv_project/bin/activate
 
 # Install required requirements
 $ pip install requirements/requirements.txt
